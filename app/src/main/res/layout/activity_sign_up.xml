@@ -129,13 +129,13 @@
         android:textSize="22sp" />
 
     <TextView
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Already have an account?Login"
-        android:textSize="22sp"
-        android:textColor="#ffffff"
-        android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
-        />
+        android:layout_marginTop="40dp"
+        android:text="Already have an account?Login"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
 
 </LinearLayout>
