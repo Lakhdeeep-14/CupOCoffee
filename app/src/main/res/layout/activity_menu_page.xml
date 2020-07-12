@@ -13,7 +13,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
         android:background="@color/colorAccent"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="#103835"
         app:cardCornerRadius="8dp">
 
         <ImageView
@@ -89,7 +89,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="235dp"
         android:layout_marginRight="30dp"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="#103835"
         app:cardCornerRadius="8dp">
 
         <ImageView
@@ -166,7 +166,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="440dp"
         android:layout_marginRight="30dp"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="#103835"
         app:cardCornerRadius="8dp">
 
         <ImageView
