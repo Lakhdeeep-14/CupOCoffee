@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".MainActivity2"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+android:layout_gravity="start"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        tools:context=".MenuPage"
+        >
+
+        <Button
+            android:id="@+id/button_checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginRight="130dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="   Add to order   " />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="173dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="285dp"
+            app:cardBackgroundColor="#103835"
+            app:cardCornerRadius="8dp">
+
+            <Button
+                android:id="@+id/increaseQuantity_chai"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="120dp"
+                android:text="+" />
+
+
+            <Button
+                android:id="@+id/decreaseQuantity_chai"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="120dp"
+                android:text="-" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="-12dp"
+                app:srcCompat="@drawable/chailate" />
+
+            <TextView
+                android:id="@+id/price_chai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="95dp"
+                android:text="$8.99"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_chai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="5dp"
+                android:text="Chai Latte"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/description_chai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="30dp"
+                android:text="Black tea infused with cinnamon, clove and warming spicies combined with steamed milk."
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/Quantity_chai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="132dp"
+                android:text="0"
+                android:textColor="@android:color/white" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="173dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="490dp"
+            app:cardBackgroundColor="#103835"
+            app:cardCornerRadius="8dp">
+
+            <Button
+                android:id="@+id/increaseQuantity_iced"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="120dp"
+                android:text="+" />
+
+
+            <Button
+                android:id="@+id/decreaseQuantity_iced"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="120dp"
+                android:text="-" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="-12dp"
+                app:srcCompat="@drawable/iceblacktea" />
+
+            <TextView
+                android:id="@+id/price_iced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="95dp"
+                android:text="$9.49"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_iced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="5dp"
+                android:text="Iced Black Tea"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/description_iced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="30dp"
+                android:text="Pure black tea, with it's pronounced bold flavour, is shaken over ice, topped with milk and cream."
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/Quantity_iced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="132dp"
+                android:text="0"
+                android:textColor="@android:color/white" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="173dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="90dp"
+            android:background="@color/colorAccent"
+            app:cardBackgroundColor="#103835"
+            app:cardCornerRadius="8dp">
+
+            <Button
+                android:id="@+id/increaseQuantity_hot"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="120dp"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/decreaseQuantity_hot"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="120dp"
+                android:text="-" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="8dp"
+
+
+                android:layout_marginTop="-12dp"
+                app:srcCompat="@drawable/chocolate" />
+
+            <TextView
+                android:id="@+id/price_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="95dp"
+                android:text="$7.99"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="5dp"
+                android:text="Hot Chocolate"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/description_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="30dp"
+                android:text="Streamed milk with vanilla - and choccolate flavoured syrup. Topped with sweetened whipped Cream."
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/Quantity_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="132dp"
+                android:text="0"
+                android:textColor="@android:color/white" />
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
