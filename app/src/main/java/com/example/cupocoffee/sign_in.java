@@ -70,6 +70,8 @@ EditText passwordEdit;
                     @Override
                     public void onFailure(Call<LoginResult> call, Throwable t) {
                         Toast.makeText(sign_in.this , t.getMessage() , Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(sign_in.this , InstructionActivity.class);
+                        startActivity(intent);
 
                     }
                 });
