@@ -24,15 +24,15 @@
         >
 
         <EditText
+            android:id="@+id/signin_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
             android:ems="10"
+            android:hint="Email"
             android:inputType="text"
-            android:textColorHint="@color/background"
             android:textColor="@color/background"
-            android:textSize="20sp"
-            />
+            android:textColorHint="@color/background"
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -49,13 +49,14 @@
         >
 
         <EditText
+            android:id="@+id/signin_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Password"
             android:inputType="textWebPassword"
-            android:textColorHint="@color/background"
             android:textColor="@color/background"
+            android:textColorHint="@color/background"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
