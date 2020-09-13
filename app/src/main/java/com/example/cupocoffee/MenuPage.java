@@ -20,34 +20,39 @@ public class MenuPage extends AppCompatActivity implements NavigationView.OnNavi
     NavigationView navigationView;
     Toolbar toolbar;
 
-
+// For passing these Strings as a intent to Profile Activity in order to see the name and email address of the user.
     String name;
     String email;
 
+    //For Counting how many Items we are selecting for each menu option
     int hotCount;
     int chaiCount;
     int icedCount;
     int hotCount1;
     int hotCount2;
 
+    // Buttons for increasing the quantity of the items in order to add to the cart
     Button inc_hot;
     Button inc_hot1;
     Button inc_hot2;
     Button inc_chai;
     Button inc_iced;
 
+    // Buttons for decresing the Quantity of the items in oreder to add to the cart
     Button dec_hot;
     Button dec_hot1;
     Button dec_hot2;
     Button dec_chai;
     Button dec_iced;
 
+    // Updates the number of items we selected so far
     TextView Qua_hot;
     TextView Qua_hot1;
     TextView Qua_hot2;
     TextView Qua_chai;
     TextView Qua_iced;
 
+    // For updating the price of each item * by number of items we are taking
     float hot_price;
     float hot_price1;
     float hot_price2;
@@ -55,11 +60,14 @@ public class MenuPage extends AppCompatActivity implements NavigationView.OnNavi
     float iced_price;
     float totalMoney;
 
+    // to add everything to cart
     Button Checkout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_page);
+
+        // Extracting String from Instruction Activity
 
         name = getIntent().getExtras().getString("name");
         email = getIntent().getExtras().getString("email");
