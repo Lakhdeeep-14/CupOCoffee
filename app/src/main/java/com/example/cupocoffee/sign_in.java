@@ -59,7 +59,13 @@ EditText passwordEdit;
                     @Override
                     public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
                         if(response.code()==200){
+
+                            LoginResult result = response.body();
                                Intent intent = new Intent(sign_in.this , InstructionActivity.class);
+                            String email = result.getEmail();
+                            String uname = result.getName();
+                            intent.putExtra("email" , email);
+                            intent.putExtra("name", uname);
                 startActivity(intent);
                         }else if(response.code()==404){
                             Toast.makeText(sign_in.this , "Invalid Credentials" , Toast.LENGTH_SHORT).show();
@@ -71,6 +77,7 @@ EditText passwordEdit;
                     public void onFailure(Call<LoginResult> call, Throwable t) {
                         Toast.makeText(sign_in.this , t.getMessage() , Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(sign_in.this , InstructionActivity.class);
+
                         startActivity(intent);
 
                     }

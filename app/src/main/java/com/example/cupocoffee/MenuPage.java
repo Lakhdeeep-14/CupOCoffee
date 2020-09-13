@@ -20,6 +20,10 @@ public class MenuPage extends AppCompatActivity implements NavigationView.OnNavi
     NavigationView navigationView;
     Toolbar toolbar;
 
+
+    String name;
+    String email;
+
     int hotCount;
     int chaiCount;
     int icedCount;
@@ -56,6 +60,9 @@ public class MenuPage extends AppCompatActivity implements NavigationView.OnNavi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_page);
+
+        name = getIntent().getExtras().getString("name");
+        email = getIntent().getExtras().getString("email");
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -210,6 +217,8 @@ navigationView.setCheckedItem(R.id.home);
                 break;
             case R.id.profile:
                 Intent g = new Intent(this , ProfileActivity.class);
+                g.putExtra("name" , name);
+                g.putExtra("email", email);
                 startActivity(g);
                 break;
             case R.id.contactUs:

@@ -7,6 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
@@ -16,6 +17,12 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+
+    String name ;
+    String email;
+
+    TextView emailaddress;
+    TextView Username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +35,17 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
 
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.profile);
+
+        name=getIntent().getExtras().getString("name");
+        email=getIntent().getExtras().getString("email");
+
+        emailaddress = (TextView)findViewById(R.id.email_profile);
+        Username= (TextView)findViewById(R.id.username_profile);
+
+        emailaddress.setText(email);
+
+        Username.setText(name);
+
     }
 
 
