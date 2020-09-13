@@ -231,7 +231,13 @@ navigationView.setCheckedItem(R.id.home);
                 break;
             case R.id.contactUs:
                 Intent contact = new Intent(this , ContactUsActivity.class);
+                contact.putExtra("name" , name);
+                contact.putExtra("email" , email);
                 startActivity(contact);
+                break;
+            case R.id.Logout:
+                Intent intent = new Intent(this, sign_in.class);
+                startActivity(intent);
                 break;
         }
         return true;

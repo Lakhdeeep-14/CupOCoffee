@@ -28,6 +28,8 @@ public class ContactUsActivity extends AppCompatActivity implements NavigationVi
     EditText namedata, emaildata, messagedata;
     Button send, details;
     Firebase firebase;
+    String name ;
+    String email;
 
 
     @Override
@@ -37,6 +39,9 @@ public class ContactUsActivity extends AppCompatActivity implements NavigationVi
         namedata = findViewById(R.id.namedata);
         emaildata = findViewById(R.id.emaildata);
         messagedata = findViewById(R.id.messagedata);
+
+        name=getIntent().getExtras().getString("name");
+        email=getIntent().getExtras().getString("email");
 
         send = findViewById(R.id.btn_send);
         details = findViewById(R.id.btn_details);
@@ -126,15 +131,23 @@ public class ContactUsActivity extends AppCompatActivity implements NavigationVi
         switch (menuItem.getItemId()) {
             case R.id.home:
                 Intent intent = new Intent(this, MenuPage.class);
+                intent.putExtra("name" , name);
+                intent.putExtra("email" , email);
                 startActivity(intent);
                 break;
             case R.id.profile:
                 Intent profile = new Intent(this, ProfileActivity.class);
+                profile.putExtra("name" , name);
+                profile.putExtra("email" , email);
                 startActivity(profile);
                 break;
             case R.id.contactUs:
                 Intent contact = new Intent(this, ContactUsActivity.class);
                 startActivity(contact);
+                break;
+            case R.id.Logout:
+                Intent back = new Intent(this, sign_in.class);
+                startActivity(back);
                 break;
         }
         return true;

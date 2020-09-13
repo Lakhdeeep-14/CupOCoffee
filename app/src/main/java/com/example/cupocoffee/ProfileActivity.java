@@ -54,6 +54,8 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         switch (menuItem.getItemId()) {
             case R.id.home:
                 Intent intent = new Intent(this, MenuPage.class);
+                intent.putExtra("name", name);
+                intent.putExtra("email", email);
                 startActivity(intent);
                 break;
             case R.id.profile:
@@ -63,6 +65,12 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
             case R.id.contactUs:
                 Intent contact = new Intent(this, ContactUsActivity.class);
                 startActivity(contact);
+                contact.putExtra("name", name);
+                contact.putExtra("email", email);
+                break;
+            case R.id.Logout:
+                Intent back = new Intent(this, sign_in.class);
+                startActivity(back);
                 break;
         }
         return true;
