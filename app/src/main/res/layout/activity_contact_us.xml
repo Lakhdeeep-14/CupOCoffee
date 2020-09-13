@@ -5,26 +5,11 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/coffeebck"
     android:fitsSystemWindows="true"
     tools:context=".ContactUsActivity"
     tools:openDrawer="start">
 
-
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Us"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="90dp"
-        android:textColor="@android:color/black"
-        android:textSize="42sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.navigation.NavigationView
@@ -34,4 +19,98 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
         app:menu="@menu/main_menu" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="90dp"
+            android:textColor="@android:color/black"
+            android:textSize="42sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/profile1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/ic_baseline_face_24"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="140dp" />
+
+
+        <EditText
+            android:id="@+id/namedata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textColorHint="@color/colorPrimary"
+            android:ems="10"
+            android:textSize="22sp"
+            android:layout_marginTop="280dp"
+            android:layout_marginStart="10dp"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/emaildata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:textSize="22sp"
+            android:hint="Email"
+            android:textColorHint="@color/colorPrimary"
+            android:inputType="textPersonName"
+            android:layout_below="@+id/namedata"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/messagedata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:hint="Description"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="22sp"
+            android:layout_below="@+id/emaildata"
+            android:textColor="@android:color/white" />
+
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="530dp"
+            android:text="Send your Message!" />
+
+        <Button
+            android:id="@+id/btn_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:enabled="false"
+            android:layout_marginBottom="70dp"
+            android:text="View sent details"/>
+    </RelativeLayout>
+
 </androidx.drawerlayout.widget.DrawerLayout>
+
