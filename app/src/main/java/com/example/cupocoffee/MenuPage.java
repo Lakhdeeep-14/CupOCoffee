@@ -238,6 +238,7 @@ navigationView.setCheckedItem(R.id.home);
             case R.id.Logout:
                 Intent intent = new Intent(this, sign_in.class);
                 startActivity(intent);
+                finish();
                 break;
         }
         return true;
