@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "972605143849",
+    "firebase_url": "https://cupcontactus.firebaseio.com",
+    "project_id": "cupcontactus",
+    "storage_bucket": "cupcontactus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972605143849:android:33674fc9af37897a22d538",
+        "android_client_info": {
+          "package_name": "com.example.cupocoffee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972605143849-scop4ca30dphh1u4bk9m498q498tkiao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTKU436IdEAaXw1zGC5SDNUy96MZ1qRd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972605143849-scop4ca30dphh1u4bk9m498q498tkiao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
